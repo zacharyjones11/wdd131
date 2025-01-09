@@ -1,0 +1,42 @@
+.content {
+    font-size: 20px;
+    font-family:'Times New Roman';
+    width: 600px;
+    margin: 0 auto;
+}
+
+.head {
+    text-align: center;
+    letter-spacing: .1rem;
+}
+
+.head h1{
+    font-weight: bold;
+}
+
+.head h3 {
+    font-size: 15px;
+    color:#006EB6;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 10px;
+    margin-bottom: 20px; 
+}
+
+main p {
+    line-height: 1.5;
+}
+
+.list {
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+li {
+    margin-top: 12px;
+}
+
+.logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
