@@ -1,16 +1,73 @@
+
+:root {
+    --background-light: white;
+    --text-light: black;
+    --background-dark: #333;
+    --text-dark: white;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+body.dark {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+/* Add transition for the logo */
+.logo {
+    transition: content 0.3s ease;
+}
+
+body.light .logo {
+    content: url('byui-logo_blue.webp');
+}
+
+body.dark .logo {
+    content: url('byui-logo_white.webp');
+}
+
+
+
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark h2 {
+    color: darkblue;
+}
+
+body.light { background-color: white; color: black; } 
+body.dark { background-color: black; color: white; } 
+.header.light { background-color: lightgray; } 
+.header.dark { background-color: darkgray; }
+
+
 .content {
     font-size: 20px;
     font-family:'Times New Roman';
     width: 600px;
     margin: 0 auto;
+    border: 2px solid lightgrey; 
+    padding: 125px;
 }
 
 .head {
     text-align: center;
     letter-spacing: .1rem;
+    text-transform: uppercase;
 }
 
 .head h1{
+    text-transform: uppercase;
     font-weight: bold;
 }
 
@@ -39,4 +96,27 @@ li {
     width: 150px;
     display: block;
     margin: 0 auto;
+}
+
+body.light {
+    background-color: white;
+    color: black;
+}
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+
+body.dark .head h3 {
+    color: #4FA3D8;
+}
+
+body.light .logo {
+    content: url('byui-logo_blue.webp');
+}
+
+body.dark .logo {
+    content: url('byui-logo_white.webp');
 }
