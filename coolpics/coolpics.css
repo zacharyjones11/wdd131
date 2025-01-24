@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: Mooli, san-serif;
+    }
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+    }
+    a:link,
+    a:visited {
+    color: var(--accent-color);
+    }
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+}
+
+.href {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    flex-direction: column;
+}
+.href a {
+    padding: 5px 0px;
+}
+
+main {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+
+.gallery {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+	max-width: 100%;
+    object-fit: cover;
+    display: block;
+    border: 5px solid white;
+    box-shadow: 5px 5px 10px var(--text-dark);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 10px 50px;
+    text-align: left;
+
+}
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .href {
+        flex-direction: row;
+    }
+    .href a {
+        padding: 0 10px;
+    }
+}
