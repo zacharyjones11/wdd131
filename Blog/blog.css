@@ -94,6 +94,11 @@ main {
     align-items: flex-start;
 }
 
+.book-review img {
+    margin: 0 auto;
+    width: 100%;
+}
+
 div {
     margin: 20px;
 }
