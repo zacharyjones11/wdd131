@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Gold: #EFC69B;
+    --Red: #AF1B3F;
+    --Dark_color: #473144;
+    --Body_font: Helvetica, Arial, sans-serif;
+    --Headline_font: Lora, impact, serif;
+}
+
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.main-nav {
+    grid-column: 3 / 3;
+    list-style-type: none;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-nav li {
+    padding: 10px;
+    padding-right: 30px;
+}
+
+
+body {
+    font-family: var(--Body_font);
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto 1fr auto; 
+    gap: 20px; 
+    padding: 0px;
+    background-color: #f9f9f9;
+}
+
+header {
+    grid-column: 1 / -1; 
+    color: var(--Red);
+    padding: 20px;
+    text-align: center;
+    font-family: var(--Headline_font);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0px 10px 0px;
+    border-top: 2px solid var(--Gold); 
+    border-bottom: 2px solid var(--Gold); 
+    border-left: none; 
+    border-right: none; 
+    width: 100%;
+}
+
+.main-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--Dark_color);
+    font-weight: bold;
+}
+
+main {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px;
+}
+
+.book-review {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+div {
+    margin: 20px;
+}
+
+.book-cover {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.filters {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid var(--Gold);
+    margin: 20px;
+}
+
+.filters label {
+    font-weight: bold;
+}
+
+.filters select {
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--Dark_color);
+}
