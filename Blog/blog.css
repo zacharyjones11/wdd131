@@ -9,9 +9,20 @@
 }
 
 
-nav{
+nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+nav {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0px 10px 0px;
+    border-top: 2px solid var(--Gold); 
+    border-bottom: 2px solid var(--Gold); 
+    border-left: none; 
+    border-right: none; 
+    width: 100%;
 }
 .main-nav {
     grid-column: 3 / 3;
@@ -21,20 +32,27 @@ nav{
     margin: 0;
     display: flex;
     justify-content: flex-end;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
 }
-
 .main-nav li {
     padding: 10px;
     padding-right: 30px;
+    margin: 0;
+}
+.main-nav a {
+    text-decoration: none;
+    color: var(--Dark_color);
+    font-weight: bold;
 }
 
 
 body {
     font-family: var(--Body_font);
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: auto 1fr auto; 
+    margin: 0; 
     gap: 20px; 
     padding: 0px;
     background-color: #f9f9f9;
@@ -50,44 +68,15 @@ header {
     font-weight: bold;
 }
 
-nav {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px 0px 10px 0px;
-    border-top: 2px solid var(--Gold); 
-    border-bottom: 2px solid var(--Gold); 
-    border-left: none; 
-    border-right: none; 
-    width: 100%;
-}
-
-.main-nav {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.main-nav li {
-    margin: 0;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: var(--Dark_color);
-    font-weight: bold;
-}
-
 main {
-    grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     gap: 20px;
 }
 
+
 .book-review {
+    grid-column: 2 / 2;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -99,8 +88,15 @@ main {
     width: 100%;
 }
 
-div {
+#main-content {
+    display: contents;
+}
+#main-content div {
     margin: 20px;
+    grid-column: 1 / 1;
+}
+#main-content section {
+    grid-column: 2 / 2;
 }
 
 .book-cover {
@@ -110,6 +106,8 @@ div {
 }
 
 .filters {
+    grid-column: 3 / 3;
+    grid-row: 2 / 2;
     padding: 20px;
     border-radius: 10px;
     display: flex;
