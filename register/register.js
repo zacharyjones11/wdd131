@@ -1,7 +1,7 @@
-// Initialize the current participant count
+
 let participantCount = 1;
 
-// Function to create a template for a new participant section
+
 function participantTemplate(count) {
     return `
     <section class="participant${count}">
@@ -43,7 +43,7 @@ function participantTemplate(count) {
     </section>`;
 }
 
-// Add event listener for the "Add Participant" button
+
 const addButton = document.getElementById("add");
 addButton.addEventListener("click", function () {
     participantCount++;
@@ -51,25 +51,24 @@ addButton.addEventListener("click", function () {
     addButton.insertAdjacentHTML("beforebegin", newParticipantHTML);
 });
 
-// Function to calculate the total fees
+
 function totalFees() {
     let feeElements = document.querySelectorAll("[id^=fee]");
-    feeElements = [...feeElements]; // Convert NodeList to an Array
+    feeElements = [...feeElements]; 
     return feeElements.reduce((total, feeElement) => {
         return total + (parseFloat(feeElement.value) || 0); // Add fee value or 0 if empty
     }, 0);
 }
 
-// Function to handle form submission
-function submitForm(event) {
-    event.preventDefault(); // Prevent the form from reloading the page
 
+function submitForm(event) {
+    event.preventDefault(); 
     const total = totalFees();
     const adultName = document.getElementById("adult_name").value;
     const summaryElement = document.getElementById("summary");
     const formElement = document.querySelector("form");
 
-    // Hide the form and show the summary message
+    
     formElement.style.display = "none";
     summaryElement.innerHTML = `
         <p>Thank you ${adultName} for registering. You have registered ${participantCount} participant(s) and owe $${total} in Fees.</p>
@@ -77,6 +76,6 @@ function submitForm(event) {
     summaryElement.style.display = "block";
 }
 
-// Add event listener for the form submission
+
 const registerForm = document.querySelector("form");
 registerForm.addEventListener("submit", submitForm);
